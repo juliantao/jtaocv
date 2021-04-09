@@ -1,0 +1,507 @@
+% !TEX TS-program = XeLaTex
+\documentclass[letterpaper, 12pt]{extarticle}
+\usepackage{../Data/cv,booktabs,fontawesome}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{datatool}
+\usepackage{longtable}
+
+% Change color to ASU Maroon
+\def\headcolor{\color[rgb]{0.55,0.11,0.25}}
+% Change color to ASU Gold
+\def\headcolor{\color[rgb]{1,0.78,0.15}}
+% Change color to Black
+\def\headcolor{\color[rgb]{0,0,0}}
+
+% Space before section headings
+\titlespacing{\section}{0pt}{2ex}{1ex}
+
+\name{Junliang `Julian' TAO}
+
+\info{\faicon{map-marker}  & School of Sustainable Engineering and the Built
+Environment               \\
+                           & Center for Bio-mediated and Bio-inspired Geotechnics \\
+                           & Arizona State University\\
+                           & 650 E Tyler Mall\\
+                           & Tempe, AZ 85281\\
+      \faicon{home}        & \url{https://sites.google.com/asu.edu/big}\\
+      \faicon{phone}       & 216-785-1376\\
+      \faicon{envelope}    & julian.tao@asu.edu\\
+      \faicon{twitter}     & juliantao\\
+      \faicon{github}      & juliantao
+}
+
+\usepackage[sfdefault,lf,t]{carlito}
+\usepackage{inconsolata}
+\addbibresource{../Data/jtpubs202104.bib}
+\addbibresource{../Data/jtpresents202104.bib}
+
+\begin{document}
+\maketitle
+
+\section{Education and Qualifications}
+
+~\begin{tabular}{llll}
+2013 & Ph.D. & Case Western Reserve University & Cleveland, USA \\
+2009 & M.S. & Tongji University & Shanghai, China\\
+2006 & B.S. & China University of Geosciences & Wuhan, China
+\end{tabular}
+
+
+\section{Positions Held}
+
+~\begin{tabular}{lP{3.5cm}P{11cm}}
+2018--& \textbf{Associate Professor} &
+        School of Sustainable Engineering and the Built Environment,
+        \newline
+        Center for Bio-mediated and Bio-inspired Geotechnics,
+        \newline
+        Arizona State University\\
+2013--2018 & \textbf{Assistant Professor} &
+        Department of Civil Engineering,
+        \newline
+        The University of Akron \\
+2009--2013 & \textbf{Research Assistant} &
+        Department of Civil Engineering,
+        \newline
+        Case Western Reserve University \\
+2006--2009 & \textbf{Research Assistant} &
+        Department of Geotechnical Engineering,
+        \newline
+        Tongji University
+  \end{tabular}
+
+\section{Areas of Expertise}%
+
+\begin{compactitem}
+  \item \textbf{Research}
+  \begin{compactitem}
+    \item Bio-inspired Geotechnics
+    \item Bio-inspired Self-burrowing Mechanisms and Robots
+    \item Bio-inspired Underground Communication
+    \item Bio-inspired Erosion and Scour Countermeasures
+    \item Bio-inspired Sensors
+    \item Soil behavior and soil mechanics
+  \end{compactitem}
+  \item \textbf{Teaching}
+  \begin{compactitem}
+    \item Soil Mechanics
+    \item Soil Behavior
+    \item Bio-inspired Design
+    \item Foundation Engineering
+    % \item \textit{In-situ} Soil Exploration
+  \end{compactitem}
+\end{compactitem}
+
+\section{Professional Licensure}%
+
+Engineer-In-Training (EIT), State of Michigan, Since 2010
+
+\section{Professional Membership}%
+
+\vspace{-2em}
+\DTLloadrawdb{member}{../Data/jtmember.csv}
+\begin{longtable}{p{0.25\textwidth}p{0.75\textwidth}}
+\DTLforeach{member}{
+  \member=Type, \org=Org}{%
+    \\
+    \member & \org
+  }
+\end{longtable}
+
+\section{Honors and Awards}
+\vspace{-2em}
+\DTLloaddb{honors}{../Data/jthonors.csv}
+\begin{longtable}{p{0.06\textwidth}p{0.94\textwidth}}
+\DTLforeach{honors}{
+  \year=Year, \award=Award}{%
+    \\
+      \year & \award
+  }
+\end{longtable}
+
+\part*{\uppercase{Publications, Intellectual Property and Presentations}}
+\uppercase{\underline{Summary of Publications and Intellectual Property}}
+
+\begin{tabular}{p{0.6\textwidth}p{0.4\textwidth}}
+Abstract published in conference proceedings      & \\
+Books Co-Edited                                   & \\
+% Book Chapters Published & \\
+% Invited Book Chapters Published & \\
+% Invited Book Chapters Submitted / In preparation &\\
+Invited Journal Publications                      & \\
+Invited Conference Papers                         & \\
+Refereed Conference Papers                        & \\
+Non-Refereed Conference Papers                    & \\
+Technical Reports or other papers (non-refereed)  & \\
+Total Journal Publications \newline
+(Published, In Press, and/or Accepted)            & \\
+Journal publications from ASU                     & \\
+Journal Publications Prior to ASU (All Published) & \\
+Journal Editorials                                & \\
+Manuscripts Submitted / In Revision from ASU      & \\
+Manuscripts in Preparation from ASU \newline
+(to be submitted before Aug. 15, 2021)            & \\
+Intellectual Property from ASU: \newline
+Patents; Patents pending                          & \\
+Intellectual Property prior to ASU: \newline
+Patents; Patents pending                          & \\
+\end{tabular}
+
+\vspace{1ex}
+\uppercase{\underline{Summary of Presentations}}
+
+\begin{tabular}{p{0.6\textwidth}p{0.4\textwidth}}
+Invited Presentations --- External    & \\
+Invited Presentations -- ASU Internal & \\
+Invited Conference Presentations, \newline
+including students                    & \\
+Peer-reviewed Conference Presentations, \newline
+including students                    & \\
+Non-refereed Conference Presentations & \\
+\end{tabular}
+
+\section{Publications}%
+Legends:
+
+\begin{tabular}{p{0.17\textwidth}p{0.80\textwidth}}
+(\textsuperscript{*})                     & Corresponding Author \\
+\textbf{Bold Font}                        & Ph.D. Student for whom I am the primary advisor  \\
+\textbf{\textit{Bold Italic Font}}        & Ph.D. Student for whom I am a co-advisor  \\
+\underline{Underline Font}                & Master's Student for whom I am the primary advisor
+or a co-advisor                          \\
+(\textsuperscript{\#})                    & Undergraduate Student \\
+($^\infty$)                               & Other/Visiting Student \\
+($^\times$)                               & Postdoctoral Researcher \\
+($^\ddagger$)                             & High School Student \\
+($^+$)                                    & Equal Contributions \\
+($^\sim$)                                 & Presenting Author \\
+\end{tabular}
+\nocite{*}
+\subsection{Journal Articles (Peer reviewed)}%
+\printbibliography[heading=none, type=article, resetnumbers=true]
+
+\subsection{Conference Papers (Peer reviewed)}%
+\printbibliography[heading=none, type=inproceedings, notkeyword=podium]
+
+\subsection{Edited Books}%
+\printbibliography[heading=none, type=book]
+
+\subsection{Technical Reports}%
+\printbibliography[heading=none, type=report]
+
+\subsection{Preprints}%
+\printbibliography[heading=none, type=online]
+
+\subsection{Working Papers}%
+\printbibliography[heading=none, type=unpublished, notkeyword=podium]
+
+\section{Presentations}%
+\DTLloadrawdb{talks}{../Data/jttalks.csv}
+\subsection{Invited Talks}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.12\textwidth}p{0.74\textwidth}}
+\DTLforeach{talks}{%
+  \type=Type, \date=Date, \ttitle=Title, \meeting=Meeting, \loc=Location}{%
+    \\%
+    \type & \date & ``\ttitle''.\ \textit{\meeting}.\ \loc}%
+\end{longtable}
+
+\subsection{Podium Presentations}%
+
+\printbibliography[heading=none, type=inproceedings, keyword=podium, resetnumbers=true]
+
+
+\part*{\uppercase{Professional activities and service}}
+\uppercase{\underline{Summary of Professional activities and service}}
+
+\begin{tabular}{p{0.6\textwidth}p{0.4\textwidth}}
+% Editor, Associate Editor for peer-reviewed journals  & \\
+% International/national conference chaired            & \\
+International/national conference committees         &  4\\
+International/national conference sessions organized &  6\\
+International/national conference sessions chaired   &  6\\
+Member of Editorial Board                            &  1\\
+Peer Reviewer for Journals                           &  30\\
+Proposal Review Service for Funding Agencies         &  2\\
+% ASU-level Committees                                 & \\
+% Engineering School-level Committees                  & \\
+Unit-level Committees                                &  2\\
+% Chair for Faculty Search Committees                  &  1\\
+% Program-level leadership                             & \\
+\end{tabular}
+
+\section{Conference Organizing}%
+
+\vspace{-2em}
+\DTLloadrawdb{orgconfs}{../Data/jtorgconfs.csv}
+\begin{longtable}{p{0.1\textwidth}p{0.6\textwidth}p{0.3\textwidth}}
+\DTLforeach{orgconfs}{
+  \year=Year, \service=Service, \session=Session, \conference=Conference,
+  \location=Location}{%
+    \\
+    \year & \session\ @\ \conference & \location
+  }
+\end{longtable}
+
+\section{Editorial Board}%
+\begin{itemize}
+\item ASTM Journal of Testing and Evaluation
+\end{itemize}
+
+\section{Reviewing Service}%
+\vspace{-2em}
+\DTLloadrawdb{review}{../Data/jtreviews.csv}
+\begin{longtable}{p{0.7\textwidth}p{0.3\textwidth}}%
+\DTLforeach{review}{%
+  \journal=Journal, \publisher=Publisher}{%
+    \\%
+    \journal & \publisher%
+  }%
+\end{longtable}
+
+\section{University Service}%
+\vspace{-2em}
+\DTLloadrawdb{univserv}{../Data/jtunivserv.csv}
+\begin{longtable}{p{0.13\textwidth}p{0.3\textwidth}p{0.54\textwidth}}
+\DTLforeach{univserv}{
+  \start=Start, \ended=End, \role=Role, \committee=Committee, \org=Organization}{%
+    \\
+    \start--\ended & \role & \committee\ @ \org%
+  }%
+\end{longtable}
+
+\section{Professional Committee Service}%
+\vspace{-2em}
+\DTLloadrawdb{committee}{../Data/jtcommittee.csv}
+\begin{longtable}{p{0.13\textwidth}p{0.3\textwidth}p{0.54\textwidth}}
+\DTLforeach{committee}{
+  \start=Start, \ended=End, \role=Role, \committee=Committee, \org=Organization}{%
+    \\
+    \start--\ended & \role & \committee\ \emph{of}\ \org%
+  }%
+\end{longtable}
+
+\part*{\uppercase{Personnel: Student Supervisor/mentoring, Teaching,
+Dissertation Committees, Researchers, and Outreach}}
+\uppercase{\underline{Summary of Mentoring}}
+
+\begin{tabular}{p{0.6\textwidth}p{0.4\textwidth}}
+% Mentored Personnel in US Academia (Tenure-track Positions)  & \\
+Postdoctoral Researchers (current/previous) & 1/0 \\
+Ph.D. Students Graduated                    & 3 \\
+Ph.D. Students Current                      & 4 \\
+M.S. Students Current                       & 2 \\
+M.S. Students Graduated                     & 8 \\
+Undergraduate Students (Research)           & 16 \\
+High-School Students (Research)             & 4 \\
+% Middle-School Students & \\
+Student Fellowships and Awards              & 12 \\
+\end{tabular}
+
+\vspace{2ex}
+\uppercase{\underline{Summary of Teaching}}
+
+\begin{tabular}{p{0.6\textwidth}p{0.4\textwidth}}
+Undergraduate Courses Taught,
+\newline including New Course Development     & 16 times, 6 different courses \\
+Graduate Courses Taught,
+\newline including New Courses Development    & 13 times, 5 different courses \\
+Average Teaching Evaluation Score for
+\newline Undergraduate Courses Taught at ASU  & 4.63 \\
+Average Teaching Evaluation Score for
+\newline Graduate Courses Taught at ASU       & 4.86 \\
+\end{tabular}
+
+\section{Mentoring}%
+\DTLloaddb{students}{../Data/jtstudents.csv}
+\DTLloadrawdb{stawards}{../Data/jtstdawards.csv}
+
+\subsection{PostDoc}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.25\textwidth}p{0.13\textwidth}p{0.49\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{Postdoc}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{longtable}%
+
+\subsection{Ph.D. Students}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.25\textwidth}p{0.13\textwidth}p{0.49\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{Ph.D.} \and \DTLisSubString{\role}{Chair}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{longtable}
+
+\subsection{M.S. Students}%
+\vspace{-2em}
+\begin{tabular}{p{0.13\textwidth}p{0.25\textwidth}p{0.13\textwidth}p{0.49\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{M.S.} \and \DTLisSubString{\role}{Chair}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{tabular}
+
+\subsection{Undergraduate Research Students}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.25\textwidth}p{0.13\textwidth}p{0.49\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{URA}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{longtable}
+
+\subsection{High School Research Students}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.23\textwidth}p{0.34\textwidth}p{0.3\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{HSRA}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{longtable}
+
+\subsection{Visiting Scholars}%
+\vspace{-2em}
+\begin{longtable}{p{0.13\textwidth}p{0.23\textwidth}p{0.34\textwidth}p{0.3\textwidth}}
+\DTLforeach[\DTLiseq{\degree}{Visiting Scholar}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \topic\ \DTLifnullorempty{\note}{}{
+    \newline
+    \emph{\note}}%
+  }%
+\end{longtable}
+
+\subsection{Served as a Thesis Committee Member for}%
+\vspace{-2em}
+\begin{longtable}{p{0.15\textwidth}p{0.25\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
+\DTLforeach[\DTLisSubString{\role}{Member}]{students}{%
+  \start=Start, \ended=End, \name=Name, \degree=Degree, \institute=Institute, \topic=Topic, \role=MyRole, \note=Note}{%
+    \\%
+    \start--\ended & \name & \institute & \degree\DTLifnullorempty{\note}{}{
+    \emph{in \note}}%
+  }%
+\end{longtable}
+
+\subsection{Student Success}%
+\vspace{-2em}
+\begin{longtable}{p{0.08\textwidth}p{0.25\textwidth}p{0.67\textwidth}}
+\DTLforeach{stawards}{%
+  \yr=Year, \name=Name, \award=Award, \org=Organization}{%
+    \\%
+    \yr & \name & \award \\
+     & & @\ \org%
+  }%
+\end{longtable}
+
+\section{Outreach Activities}%
+\DTLloadrawdb{outreach}{../Data/jtoutreach.csv}
+\vspace{-2em}
+\begin{longtable}{p{0.07\textwidth}p{0.17\textwidth}p{0.46\textwidth}p{0.3\textwidth}}
+\DTLforeach{outreach}{
+  \yr=Yr, \role=Role, \activity=Activity, \loc=Organization}{%
+    \\
+    \yr & \role & \activity & \loc
+  }
+\end{longtable}
+
+\section{Teaching}%
+\DTLloaddb{teaching}{../Data/jtteaching.csv}
+\subsection{At ASU}%
+\vspace{-1em}
+\begin{longtable}{m{0.43\textwidth}m{0.13\textwidth}cccm{0.07\textwidth}m{0.14\textwidth}m{0.21\textwidth}}
+\bfseries Course &
+\bfseries Term/Year &
+\bfseries Credits &
+\bfseries Enrollment &
+\bfseries Evaluation
+\DTLforeach[\DTLisSubString{\course}{CEE}]{teaching}{%
+  \course=Course, \ctitle=Title, \term=Term, \yr=Year, \credits=Credits, \enroll=Enrollment, \instructor=Instructor, \college=College}{%
+    \\%
+    \course\ \ctitle & \term/\yr & \credits & \enroll & \instructor/\college %
+  }%
+\end{longtable}
+
+\subsection{At UAkron}%
+\vspace{-1em}
+\begin{longtable}{m{0.43\textwidth}m{0.13\textwidth}cccm{0.07\textwidth}m{0.14\textwidth}m{0.21\textwidth}}
+\bfseries Course &
+\bfseries Term/Year &
+\bfseries Credits &
+\bfseries Enrollment &
+\bfseries Evaluation
+\DTLforeach[\DTLisSubString{\course}{4300}]{teaching}{%
+  \course=Course, \ctitle=Title, \term=Term, \yr=Year, \credits=Credits, \enroll=Enrollment, \instructor=Instructor, \college=College}{%
+    \\%
+    \course\ \ctitle & \term/\yr & \credits & \enroll & \instructor/\college %
+  }%
+\end{longtable}
+
+\part*{\uppercase{Research Support}}
+\uppercase{\underline{Summary of Research Support}}
+
+\begin{tabular}{p{0.7\textwidth}p{0.3\textwidth}}
+Total amount of all pending proposals & \\
+Total amount of all awards & \\
+Tao's recognition in all awards & \\
+Total amount of all awards in which Tao is the PI & \\
+Total award amount received at ASU as of 12/31/2020 & \\
+Research Expenditures as of 09/27/2020 & \\
+\end{tabular}
+
+\section{Research Support}%
+\DTLloadrawdb{grants}{../Data/jtgrants.csv}
+\subsection{External Funding}%
+\vspace{-2em}
+\begin{longtable}{p{0.15\textwidth}p{0.65\textwidth}p{0.2\textwidth}}
+\DTLforeach[\DTLiseq{\type}{External}]{grants}{%
+  \start=Start, \ended=End, \PI=PI, \co=Co, \ptitle=Title, \agency=Agency, \amount=Amount, \share=Share, \type=Type}{%
+    \\%
+    \start--\ended &
+    PI:\PI; \DTLifnullorempty{\co}{}{\ Co-PI:\ \co.\ }\
+    ``\ptitle''.\ \textit{\agency}\ (Tao's share: \share\%) &
+    \amount}%
+\end{longtable}
+
+\subsection{Internal Funding}%
+\vspace{-2em}
+\begin{longtable}{p{0.15\textwidth}p{0.65\textwidth}p{0.2\textwidth}}
+\DTLforeach[\DTLiseq{\type}{Internal}]{grants}{%
+  \start=Start, \ended=End, \PI=PI, \co=Co, \ptitle=Title, \agency=Agency, \amount=Amount, \share=Share, \type=Type}{%
+    \\%
+    \start--\ended &
+    PI:\PI; \DTLifnullorempty{\co}{}{\ Co-PI:\ \co.\ }\
+    ``\ptitle''.\ \textit{\agency}\ (Tao's share: \share\%) &
+    \amount}%
+\end{longtable}
+
+% \subsection{Declined proposals}%
+% \vspace{-2em}
+% \begin{longtable}{p{0.15\textwidth}p{0.65\textwidth}p{0.2\textwidth}}
+% \DTLforeach[\DTLiseq{\type}{Declined}]{grants}{%
+%   \start=Start, \ended=End, \PI=PI, \co=Co, \ptitle=Title, \agency=Agency, \amount=Amount, \share=Share, \type=Type}{%
+%     \\%
+%     \start--\ended &
+%     PI:\PI; \DTLifnullorempty{\co}{}{\ Co-PI:\ \co.\ }\
+%     ``\ptitle''.\ \textit{\agency} &
+%     \amount}%
+% \end{longtable}
+
+\end{document}
