@@ -8,8 +8,9 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2014,2018,Junhong Li,Ph.D.,UAkron,Bridge Scour,Dissertation Chair,
 2014,2018,Hui Tao,Ph.D.,UAkron,Internal Erosion,Dissertation Chair,
 2021,,Md Ragib Shaharear,M.S.,ASU,Burrowing Robots,Dissertation Chair,
+2019,,Brian Rudolph,M.S.,ASU,,Co-Chair,Co-advised with Professor Claudia Zapata
 2019,,Drew Enns,M.S.,ASU,Mangrove + Scour,Thesis co-Chair,Co-advised with Professor Leon van Paassen
-2019,2020,Joel Ramirez,M.S.,ASU,Mangrove + Scour,Thesis co-Chair,Co-advised with Professor Leon van Paassen
+2019,2020,Joel Ramirez,M.S.,ASU,Mangrove + Scour,Co-Chair,Co-advised with Professor Leon van Paassen; Student graduated without thesis
 2015,2018,Sichuan Huang,M.S.,UAkron,Burrowing Mechanisms,Thesis Chair,
 2016,2018,Ganesh Pandey,M.S.,UAkron,Recycled glass,Thesis Chair,
 2015,2017,Ruotian Bao,M.S.,UAkron,MICP,Thesis Chair,
@@ -17,21 +18,26 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2014,2016,Jie Hu,M.S.,UAkron,Energy Harvesting,Thesis Chair,
 2015,2016,Goutham Narayan Mopur,M.S.,UAkron,Peat Stabilization,Thesis Chair,
 2013,2014,Candice Fellows,M.S.,UAkron,Energy Piles,Thesis co-Chair,Co-advised with Professor Robert Liang
-2021,,Leslie Bautista and Marilyn Mendoza,URA,ASU,Geo-prediction,,Co-advised with Professors Ed Kavazanjian and Leon van Paassen
-2020,,Chung Ting Wong,URA,ASU,Mangrove + Scour,,Co-advised with Professor Leon van Paassen
-2020,2020,Andrew Suarez,URA,ASU,Burrowing Robots,,Veteran
+2021,2021,Ashwin Kumar S,URA,ASU,Burrowing Robots,,"SURI, from Easwari Engineering College, India"
+2021,2021,Harsh Rajkamal,URA,ASU,Burrowing Robots,,"SURI, from Vellore Institute of Technology, India"
+2021,2021,Shesha Sai Tushar Kanchipuram,URA,ASU,Burrowing Robots,,"SURI, from Biral Institute of Technology and Science, Pilani, India"
+2021,2021,Zakary Vladich,URA,ASU,Burrowing Robots,,"REU, from Northern Arizona University"
+2021,2021,Leslie Bautista and Marilyn Mendoza,URA,ASU,Geo-prediction,,Co-advised with Professors Ed Kavazanjian and Leon van Paassen
+2020,2021,Chung Ting Wong,URA,ASU,Mangrove + Scour,,Co-advised with Professor Leon van Paassen
+2020,2020,Andrew Suarez,URA,ASU,Burrowing Robots,,"REU, Veteran"
 2019,,Alexandria Ardente,URA,ASU,Burrowing Robots,,
 2019,2019,Lindsay Lee,URA,ASU,Burrowing Robots,,Mechanical Engineering
 2019,2019,Amanda Clarke,URA,ASU,Burrowing Robots,,VIP program
 2019,2019,Brandon Grimes,URA,ASU,Burrowing Robots,,VIP program
-2019,2020,Stephen Dages,URA,ASU,Burrowing Robots,,Physics
-2019,2019,Khem Holden,URA,ASU,Burrowing Robots,,Robotics
-2019,2019,Hyun Choi,URA,ASU,Burrowing Robots,,Biology
+2019,2020,Stephen Dages,URA,ASU,Burrowing Robots,,"REU, Physics, from West Chester University"
+2019,2019,Khem Holden,URA,ASU,Burrowing Robots,,"REU, Robotics, from University of California, Sant Cruz"
+2019,2019,Hyun Choi,URA,ASU,Burrowing Robots,,"REU, Biology"
 2019,2019,Makram Jreissat,URA,ASU,Burrowing Robots,,
 2017,2017,Nathaniel Green,URA,UAkron,MICP,,Biology
 2016,2017,Gwen Baker,URA,UAkron,Recycled glass,,
 2014,2015,Matthew Cymbal,URA,UAkron,Underwater Robot,,
 2015,2015,Daniel Gutwein,URA,UAkron,Energy Harvesting,,
+2021,2021,Jannette Marti-Subirana,HSRA,Chandler Preparatory Academy,Burrowing Mechanisms,,
 2017,2017,Sophia Solganik,HSRA,Shaker Heights High School,DEM simulation,,
 2017,2017,Lillian Gonzalez,HSRA,Home-schooled,DEM simulation,,
 2016,2016,Nicholas Robinson,HSRA,Green High School,3D printing,,
