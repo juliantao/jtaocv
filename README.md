@@ -1,6 +1,4 @@
-# A LaTex CV Template conforming to ASU FSE format
-
-This is a CV template with the following features:
+# Personal LaTex CV conforming to ASU FSE format
 
 * Most of the lists are imported from csv data files using the *datatool*
 package to control the formats. This makes it easy to update the CV by simply
