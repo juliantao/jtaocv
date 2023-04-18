@@ -1,0 +1,495 @@
+---
+name: Junliang "Julian" Tao
+address: "School of Sustainable Engineering and the Built Environment,\\tabularnewline Arizona State University, AZ, 85286"
+www: juliantao.github.io/big/
+email: "julian.tao@asu.edu"
+twitter: juliantao25
+scholar: "Dq4lhi4AAAAJ"
+orcid: "0000-0002-3772-3099"
+linkedin: "junliang-tao-083ab050"
+github: juliantao
+date: "`r format(Sys.Date(), '%B %Y')`"
+date-format: "MMMM YYYY"
+position: PhD, Associate Professor
+format: cv-pdf
+---
+
+```{r import} 
+source("preprocess.R")
+```
+
+# Education 
+
+```{r degrees, results='asis'}
+tribble(
+  ~Degree, ~Area, ~Insitution, ~State, ~Years,
+  "\\textbf{PhD} ", "Civil Engineering", "Case Western Reserve University", "Cleveland, US", "2013",
+  "\\textbf{MS} ", "Civil Engineering", "Tongji University", "Shanghai, China", "2009",
+  "\\textbf{BS} ", "Civil Engineering", "China University of Geosciences", "Wuhan, China", "2006"
+) |> 
+  baretable()
+```
+
+# Experiences
+
+```{r employment, results='asis'}
+tribble(
+  ~Start, ~End, ~Position, ~Institute,
+  2018, NA, "\\textbf{Associate Professor}", "School of Sustainable Engineering and the Built Environment, \\newline Arizona State University",
+	2022, 2022, "\\textbf{Guest Professor}", "Institute of Geotechnical Engineering, \\newline University of Natural Resources and Life Sciences (BOKU)",
+  2013, 2018, "\\textbf{Assistant Professor}", "Department of Civil Engineering, \\newline University of Akron"
+) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position, Institute) |>
+  baretable(align = "llp{1.5in}p{6.5in}")
+```
+
+# Honors and Awards
+
+```{r awards, results='asis'}
+awards <- tribble(
+  ~Year, ~Award,
+  2020, "The 10th Anniversary Excellent Paper Award, Journal of Rock Mechanics and Geotechnical Engineering",
+  2017, "CAREER Award, National Science Foundation",
+  2017, "Gary W. Johnson Young Civil Engineer of the Year Award, ASCE Akron-Canton Section",
+  2017, "Excellent Paper Award, The 2017 International Conference on Transportation Infrastructure and Materials",
+  2017, "Keynote Speaker, The 2nd Transportation Research Congress, Beijing, China",
+  2016, "Summer Faculty Fellowship, University of Akron",
+  2015, "Highlight paper, IFCEE 2015",
+  2014, "Biomimicry Research and Innovation Center Research Incentive Grant, University of Akron",
+  2014, "ExCEED 2014 Teaching Fellow, ASCE",
+  2013, "Geo-institute Travel Award, ASCE Geo-congress 2013",
+  2013, "Roy Harley Prize, Case Western Reserve University",
+  2012, "Highlight paper, Smart Materials and Structures",
+  2012, "USUCGER Travel Award, 1st USUCGER Early Career Geotechnical Conference and NSF CMMI Research and Innovation Conference",
+  2012, "Craig J. Miller Memorial Award, Case Western Reserve University",
+  2011, "SGS-Graduate Student Travel Award, Case Western Reserve University",
+) %>%
+  baretable(align = "lp{0.8in}p{6in}")
+```
+
+# Mission Statement
+
+I am leading the research group Bio-inspired Geotechnics (BiG).
+Our mission is to discover the fundamental mechanisms of various interactions between living things and geological materials, to abstract these mechanisms to engineering design principles, and to translate the design principles to autonomous, efficient, sustainable and intelligent geotechnics.
+We seek the answers at the boundaries of biology (and other natural sciences), mechanics and engineering. We achieve the BiG goals and extend the impacts from research, teaching, outreach, entrepreneurship and collaboration.
+Current research topics include: bio-inspired self-burrowing robots, bio-inspired underground sensing and communication, bio-inspired sustainable countermeasures to natural hazards.
+
+# Professional Membership
+
+```{r member, results='asis'}
+member <- tribble(
+  ~Type, ~Org,
+  "Associate Member", "American Society of Civil Engineers (ASCE) Geo-Institute",
+  "Member", "International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE)",
+  "Member", "Society for Integrative and Comparative Biology (SICB)",
+  "Member", "Institute of Electrical and Electronics Engineers (IEEE)",
+  "Member", "International Society for Optical Engineering (SPIE)",
+  "Member", "Transportation Research Board (TRB)",
+#  "Member", "International Association of Chinese Infrastructure Professionals (IACIP)",
+) %>%
+  baretable(align = "lp{1.5in}p{6in}")
+```
+
+\part*{\uppercase{Publications, Intellectual Property and Presentations}}
+
+## Summary of Publications and Intellectual Property
+
+```{r publication-summary, results='asis'}
+tribble(
+        ~PublicationType, ~Count,
+        "Abstract published in conference proceedings", nabstract,
+        "Books Co-Edited", nbook,
+        "Book Chapters Published", nchapter,
+        "Invited Book Chapters Published", ninvitechapter,
+        "Invited Book Chapters Submitted or In preparation", 0,
+        "Invited Journal Publications", ninvitejournal,
+        "Invited Conference Papers", ninviteconf,
+        "Refereed Conference Papers", nproceeding,
+        "Non-Refereed Conference Papers", nproceeding_nonref,
+        "Technical Reports or other papers (non-refereed)", nreport,
+        "Journal publications from ASU", nasujournal,
+        "Journal Publications Prior to ASU (All Published)", narticle-nasujournal,
+        "Journal Editorials", npub_editorial,
+        "Manuscripts Submitted or In Revision from ASU", nunpublished,
+        "Patents; Patents pending", npatent
+) |>
+  filter(Count > 0) |>
+  baretable(align = "lp{4in}l")
+```
+
+## Summary of Presentations 
+
+```{r talks-summary, results='asis'}
+tribble(
+        ~TalkType, ~Count,
+        "Invited Presentation, External", ntalk_external,
+        "Invited Presentation, Internal", ntalk_internal,
+        "Invited Conference Presentations, including Students", npresent_student,
+        "Peer-reviewed Conference Presentations, including Students", npresent_peer,
+        "Non-refereed Conference Presentations", npresent_non_peer,
+) |> 
+  filter(Count > 0) |>
+  baretable(align = "lp{4in}l")
+```
+\vspace{1ex}
+
+Since 2009 I have authored `r npub` research papers and filed `r npatent` patents.
+As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`.
+
+
+# Journal Papers
+
+```{r research-papers, results='asis'}
+jtpubs[bibtype == "Article"] |>
+  add_bib_section()
+```
+
+# Papers in Refereed Conference Proceedings
+
+```{r papers-in-proceedings, results='asis'}
+jtpubs[bibtype == "InProceedings"] |>
+  add_bib_section()
+```
+
+# Edited Books
+
+```{r book, results='asis'}
+jtpubs[bibtype == "Book"] |>
+  add_bib_section()
+```
+
+# Technical Reports
+
+```{r report, results='asis'}
+jtpubs[bibtype == "Report"] |>
+  add_bib_section()
+```
+
+# PhD Thesis
+
+```{r phd, results='asis'}
+jtpubs[bibtype == "Thesis"] |> 
+  add_bib_section()
+```
+
+# Patents
+
+```{r patent, results='asis'}
+jtpubs[bibtype == "Patent"] |> 
+  add_bib_section()
+```
+
+# Invited Talks
+
+```{r talks, results='asis'}
+jttalks |>
+  arrange(-Year) |>
+  mutate(
+    Year = as.character(Year),
+    Month = as.character(Month),
+    Time = paste(Year, "--", Month, sep = ""),
+    Talk = paste("\\textit{", Title, "}. ", Meeting, ". ", Location, sep = ""),
+  ) |>
+  select(Time, Talk) |>
+  baretable(align = "lp{0.7in}p{6in}")
+```
+
+\part*{\uppercase{Professional activities and service}}
+
+## Summary of Professional Activities and Service
+
+```{r service-summary, results='asis'}
+tribble(
+        ~ServiceType, ~Count,
+        "Editor, Associate Editor for peer-reviewed journals", neditorial_editor,
+        "Member of Editorial Board", neditorial_board,
+        "International/national conference chaired", nconf_chair,
+        "International/national conference committees", nconf_committee,
+        "International/national conference sessions organized", nconf_session_org,
+        "International/national conference sessions chaired", nconf_session_chair,
+        "Peer Reviewer for Journals", nreview_journal,
+        "Peer Reviewer for Conferences", nreview_conf,
+        "Proposal Review Service for Funding Agencies", nreview_agency,
+        "University-level Committees", ncommittee_university,
+        "Engineering School-level Committees", ncommittee_school,
+        "Unit-level Committees", ncommittee_unit,
+        "Chair for Faculty Search Committees", ncommittee_search_chair,
+        "Program-level leadership", nprogram_leader,
+) |> 
+  filter(Count > 0) |>
+  baretable(align = "lp{4in}l")
+```
+
+
+# Conference Organization
+
+```{r conforg, results='asis'}
+jtorgconfs |>
+  arrange(-Year) |>
+  mutate(
+    Conforg = paste(Role, " of ", Committee, "\\linebreak", "@", Conference, sep = ""),
+  ) |>
+  select(Year, Conforg, Location) |>
+  baretable(align = "lp{0.7in}p{4.2in}p{2.2in}")
+```
+
+# Editorial Services 
+
+```{r editorial, results='asis'}
+jteditorial |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+      )
+  ) |>
+  select(Years, Role, Journal) |>
+  baretable(align = "lp{1in}p{1.8in}p{4in}")
+```
+
+# Reviewing Services
+
+```{r review, results='asis'}
+jtreviews |>
+  select(Entity, Organization) |>
+  baretable(align = "lp{4.5in}p{3in}")
+```
+
+# University Services
+
+```{r uniserv, results='asis'}
+jtunivserv |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+      ),
+    Uniserv = paste(Committee, " @", Organization, sep = ""),
+  ) |>
+  select(Years, Role, Uniserv) |>
+  baretable(align = "lp{1in}p{1.5in}p{4.3in}")
+```
+
+# Professional Committee Service
+
+```{r profserv, results='asis'}
+jtcommittee |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+      ),
+    Profserv = paste(Committee, " of ", Organization, sep = ""),
+  ) |>
+  select(Years, Role, Profserv) |>
+  baretable(align = "lp{1in}p{1.5in}p{4.3in}")
+```
+
+\part*{\uppercase{Personnel: Student Supervisor/mentoring, Teaching,
+		Dissertation Committees, Researchers, and Outreach}}
+
+## Summary of Mentoring
+
+```{r student-summary, results='asis'}
+tribble(
+        ~StudentType, ~Count,
+        "Mentored Personnel in US Academia (Tenure-track Positions)", nstudent_academia,
+        "PostDoc Researchers", npostdoc,
+        "PhD Students Graduated", nphd_graduated,
+        "PhD Students Current", nphd_current,
+        "MS Students Graduated", nms_graduated,
+        "MS Students Current", nms_current,
+        "Undergraduate research Students", nura,
+        "High-School Research Students", nhsra,
+        "Middle-School Research Students", nmsra,
+        "Student Fellowships and Awards", nstaward,
+) |> 
+  filter(Count > 0) |>
+  baretable(align = "lp{4in}l")
+```
+
+## Summary of Teaching
+
+```{r teaching-summary, results='asis'}
+tribble(
+        ~Item, ~Entry,
+        "Undergraduate Courses Taught", nteaching_under,
+        "Graduate Courses Taught", nteaching_grad,
+        "Average Undergraduate Teaching Score", nteaching_under_score,
+        "Average Graduate Teaching Score", nteaching_grad_score,
+
+) |> 
+  mutate(Entry = as.character(Entry)) |>
+  baretable(align = "lp{4in}l")
+```
+
+
+# Mentoring
+
+## PostDoc
+
+
+```{r postdoc, results='asis'}
+allstudents |>
+  filter(Degree == "PostDoc") |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+```
+
+## Ph.D. Students
+
+```{r phds, results='asis'}
+allstudents |>
+  filter(c(Degree == "PhD"), (MyRole != "Thesis Committee Member")) |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+```
+
+## M.S. Students
+
+```{r masters, results='asis'}
+allstudents |>
+  filter(c(Degree == "MS"), (MyRole != "Thesis Committee Member")) |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+```
+
+## Undergraduate Research Students
+
+```{r uras, results='asis'}
+allstudents |>
+  filter(Degree == "URA") |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+```
+
+## High School Research Students
+
+```{r hsras, results='asis'}
+allstudents |>
+  filter(Degree == "HSRA") |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{1.8in}p{2.2in}p{2.1in}")
+```
+
+## Visiting Scholars 
+
+```{r visiting, results='asis'}
+allstudents |>
+  filter(Degree == "Visiting Scholar") |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{1.8in}p{2.2in}p{2.1in}")
+```
+
+## Served as a Thesis Committee Member for
+
+```{r thesiscommittee, results='asis'}
+allstudents |>
+  filter(MyRole == "Thesis Committee Member") |>
+  select(Years, Name, Institute, TopicNotes) |>
+  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+```
+
+## Student Success
+
+```{r stdawards, results='asis'}
+jtstdawards |>
+  arrange(-Year) |>
+  mutate(StAward = paste(Award, ", @", Organization, sep = "")) |>
+  select(Year, Name, StAward) |>
+  baretable(align = "lp{0.5in}p{1.4in}p{4.8in}")
+```
+
+# Outreach Activities
+
+
+```{r outreach, results='asis'}
+jtoutreach |>
+  arrange(-Year) |>
+  baretable(align = "lp{0.5in}p{1.4in}p{3.8in}p{0.9in}")
+```
+
+# Teaching
+
+## At ASU
+
+```{r asuteaching, results='asis'}
+allteaching |>
+  select(CourseTitle, TermYear, Enrollment, JTevaluation) |>
+  filter(grepl("CEE", CourseTitle)) |>
+  baretable(align = "lp{3in}p{1in}p{1in}p{1.5in}")
+```
+
+## At UAkron
+
+```{r akronteaching, results='asis'}
+allteaching |>
+  select(CourseTitle, TermYear, Enrollment, JTevaluation) |>
+  filter(!grepl("CEE", CourseTitle)) |>
+  baretable(align = "lp{3in}p{1in}p{1in}p{1.5in}")
+```
+
+\part*{\uppercase{Research Support}}
+
+## Summary of Research Support
+
+
+```{r grant-summary, results='asis'}
+tribble(
+        ~Item, ~Amount,
+        "Total amount of all pending proposals", sumpending,
+        "Total amount of all awards", sumgrants,
+        "Tao's recognition in all awards", sumtao,
+        "Total amount of all awards in which Tao is the PI", sumtaopi,
+        "Tao's total award amount received at ASU", sumasutao,
+        "Research Expenditures", "\\$858,729",
+) |> 
+  baretable(align = "lp{4in}l")
+```
+
+# External Funding
+
+```{r externalfunding, results='asis'} 
+
+allgrants |>
+  filter(Type == "External", Status != "Pending") |>
+  arrange(desc(Period), desc(Amount)) |>
+  select(Period, Entry, Amount) |>
+  baretable(align = "lp{1in}p{4.7in}p{1.3in}")
+```
+
+# Internal Funding
+
+```{r internalfunding, results='asis'} 
+
+allgrants |>
+  filter(Type == "Internal", Status != "Pending") |>
+  arrange(desc(Period), desc(Amount)) |>
+  select(Period, Entry, Amount) |>
+  baretable(align = "lp{1in}p{4.7in}p{1.3in}")
+```

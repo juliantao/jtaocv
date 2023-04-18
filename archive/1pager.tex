@@ -1,0 +1,173 @@
+% !TEX TS-program = XeLaTex
+\documentclass[letterpaper, 12pt]{extarticle}
+\usepackage{../Data/cv4pp,booktabs,fontawesome}
+\usepackage{datatool}
+\usepackage{longtable}
+\usepackage{siunitx}
+\sisetup{group-separator = {,}, detect-mode=false, mode=text}
+
+% Change color to ASU Maroon
+\def\headcolor{\color[rgb]{0.55,0.11,0.25}}
+% Change color to ASU Gold
+\def\headcolor{\color[rgb]{1,0.78,0.15}}
+% Change color to Black
+\def\headcolor{\color[rgb]{0,0,0}}
+
+% Space before section headings
+\titlespacing{\section}{0pt}{2ex}{1ex}
+
+\name{Junliang `Julian' TAO}
+
+\info{\faicon{map-marker}  & 650 E Tyler Mall, Tempe, AZ 85281\\
+      \faicon{home}        & \url{https://juliantao.github.io/big}\\
+      \faicon{phone}       & 216-785-1376\\
+      \faicon{envelope}    & \href{julian.tao@asu.edu}{julian.tao@asu.edu}\\
+}
+
+\usepackage[sfdefault,lf,t]{carlito}
+\usepackage{inconsolata}
+\addbibresource{../Data/jttop10.bib}
+
+\begin{document}
+\maketitle
+
+\section{Education and Qualifications}
+
+~\begin{tabular}{llll}
+	2013 & Ph.D. & Case Western Reserve University & Cleveland, USA  \\
+	2009 & M.S.  & Tongji University               & Shanghai, China \\
+	2006 & B.S.  & China University of Geosciences & Wuhan, China
+\end{tabular}
+
+
+\section{Positions Held}
+
+~\begin{tabular}{lP{3.5cm}P{11cm}}
+	2018--     & \textbf{Associate Professor} &
+	School of Sustainable Engineering and the Built Environment,
+	\newline
+	Center for Bio-mediated and Bio-inspired Geotechnics,
+	\newline
+	Arizona State University                    \\
+	2013--2018 & \textbf{Assistant Professor} &
+	Department of Civil Engineering,
+	\newline
+	The University of Akron                     \\
+	2009--2013 & \textbf{Research Assistant}  &
+	Department of Civil Engineering,
+	\newline
+	Case Western Reserve University             \\
+	2006--2009 & \textbf{Research Assistant}  &
+	Department of Geotechnical Engineering,
+	\newline
+	Tongji University
+\end{tabular}
+
+\section{Areas of Expertise}%
+
+\begin{compactitem}
+	\item \textbf{Research}
+	\begin{compactitem}
+		\item Bio-inspired Geotechnics
+		\item Bio-inspired Self-burrowing Mechanisms and Robots
+		\item Bio-inspired Underground Communication
+		\item Bio-inspired Erosion and Scour Countermeasures
+		\item Bio-inspired Sensors
+		\item Soil behavior and soil mechanics
+	\end{compactitem}
+	\item \textbf{Teaching}
+	\begin{compactitem}
+		\item Soil Mechanics
+		\item Soil Behavior
+		\item Bio-inspired Design
+		\item Foundation Engineering
+		% \item \textit{In-situ} Soil Exploration
+	\end{compactitem}
+\end{compactitem}
+
+\section{Honors and Awards}
+\vspace{-2em}
+\DTLloaddb{honors}{../Data/jthonors.csv}
+\begin{longtable}{p{0.06\textwidth}p{0.94\textwidth}}
+	\DTLforeach[\DTLislt{2013}{\year}]{honors}{
+		\year=Year, \award=Award}{%
+	\\
+	\year & \award
+	}
+\end{longtable}
+
+
+\section{Publications (Select Journal Articles)}%
+
+Legends:
+
+\begin{tabular}{p{0.17\textwidth}p{0.80\textwidth}}
+	(\textsuperscript{*})      & Corresponding Author                               \\
+	\textbf{Bold Font}         & Ph.D. Student for whom I am the primary advisor    \\
+	\underline{Underline Font} & Master's Student for whom I am the primary advisor
+	or a co-advisor                                                                 \\
+	(\textsuperscript{\#})     & Undergraduate Student                              \\
+	($^\infty$)                & Other/Visiting Student                             \\
+	($^\times$)                & Postdoctoral Researcher                            \\
+\end{tabular}
+
+\nocite{*}
+\printbibliography[heading=none, type=article, resetnumbers=true]
+
+\section{Teaching}%
+
+\DTLloaddb{teaching}{../Data/jtteaching.csv}
+\subsubsection{At ASU}%
+\vspace{-1em}
+\begin{longtable}{m{0.43\textwidth}m{0.13\textwidth}cccm{0.07\textwidth}m{0.14\textwidth}m{0.21\textwidth}}
+	\bfseries Course     &
+	\bfseries Term/Year  &
+	\bfseries Credits    &
+	\bfseries Enrollment &
+	\bfseries Evaluation
+	\DTLforeach[\DTLisSubString{\course}{CEE}]{teaching}{%
+		\course=Course, \ctitle=Title, \term=Term, \yr=Year, \credits=Credits, \enroll=Enrollment, \instructor=Instructor, \college=College}{%
+	\\%
+	\course\ \ctitle     & \term/\yr & \credits & \enroll & \instructor/\college %
+	}%
+\end{longtable}
+
+\subsubsection{At UAkron}%
+\vspace{-1em}
+\begin{longtable}{m{0.43\textwidth}m{0.13\textwidth}cccm{0.07\textwidth}m{0.14\textwidth}m{0.21\textwidth}}
+	\bfseries Course     &
+	\bfseries Term/Year  &
+	\bfseries Credits    &
+	\bfseries Enrollment &
+	\bfseries Evaluation
+	\DTLforeach[\DTLisSubString{\course}{4300}]{teaching}{%
+		\course=Course, \ctitle=Title, \term=Term, \yr=Year, \credits=Credits, \enroll=Enrollment, \instructor=Instructor, \college=College}{%
+	\\%
+	\course\ \ctitle     & \term/\yr & \credits & \enroll & \instructor/\college %
+	}%
+\end{longtable}
+
+\subsection{Outreach Activities}%
+\DTLloadrawdb{outreach}{../Data/jtoutreach.csv}
+\vspace{-2em}
+\begin{longtable}{p{0.07\textwidth}p{0.17\textwidth}p{0.46\textwidth}p{0.3\textwidth}}
+	\DTLforeach{outreach}{
+		\yr=Yr, \role=Role, \activity=Activity, \loc=Organization}{%
+	\\
+	\yr & \role & \activity & \loc
+	}
+\end{longtable}
+
+
+\section{Select Service Activites}%
+\vspace{-2em}
+\DTLloadrawdb{committee}{../Data/jtcommittee4pp.csv}
+\begin{longtable}{p{0.13\textwidth}p{0.3\textwidth}p{0.54\textwidth}}
+	\DTLforeach{committee}{
+		\start=Start, \ended=End, \role=Role, \committee=Committee, \org=Organization}{%
+	\\
+	\start--\ended & \role & \committee\ \emph{of}\ \org %
+	}%
+\end{longtable}
+
+\end{document}

@@ -1,0 +1,105 @@
+---
+name: Junliang "Julian" Tao
+address: "School of Sustainable Engineering and the Built Environment,\\tabularnewline Arizona State University, AZ, 85286"
+www: juliantao.github.io/big/
+email: "julian.tao@asu.edu"
+scholar: "Dq4lhi4AAAAJ"
+orcid: "0000-0002-3772-3099"
+github: juliantao
+date: "`r format(Sys.Date(), '%B %Y')`"
+date-format: "MMMM YYYY"
+position: PhD, Associate Professor
+fontsize: "11pt"
+format: cv-pdf
+header-includes:
+  - \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm}
+---
+
+\titlespacing{\section}{0pt}{1.ex}{0.5ex}
+\thispagestyle{empty}
+
+```{r import} 
+source("preprocess.R")
+```
+
+# Education 
+
+```{r degrees, results='asis'}
+tribble(
+  ~Degree, ~Area, ~Insitution, ~State, ~Years,
+  "\\textbf{PhD} ", "Civil Engineering", "Case Western Reserve University", "Cleveland, US", "2013",
+  "\\textbf{MS} ", "Civil Engineering", "Tongji University", "Shanghai, China", "2009",
+  "\\textbf{BS} ", "Civil Engineering", "China University of Geosciences", "Wuhan, China", "2006"
+) %>%
+  baretable()
+```
+
+# Experiences
+
+```{r employment, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2018, NA, "\\textbf{Associate Professor}, School of Sustainable Engineering and the Built Environment, Arizona State University",
+	2022, 2022, "\\textbf{Guest Professor}, Institute of Geotechnical Engineering, University of Natural Resources and Life Sciences (BOKU)",
+  2013, 2018, "\\textbf{Assistant Professor}, Department of Civil Engineering, University of Akron"
+) |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable(
+            align = "lp{1in}p{5.5in}"
+  )
+```
+
+# Selected awards and honours
+
+```{r awards, results='asis'}
+awards <- tribble(
+  ~Year, ~Award,
+  2017, "CAREER Award, National Science Foundation",
+  2017, "Young Engineer of the Year Award, American Society of Civil Engineers, Akron Section"
+) %>%
+  baretable()
+```
+
+# Professional Membership and Service
+
+```{r member, results='asis'}
+member <- tribble(
+  ~Type, ~Org,
+  "Associate Member", "American Society of Civil Engineers (ASCE) Geo-Institute",
+  "Member", "Institute of Electrical and Electronics Engineers (IEEE)",
+  "Member", "International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE)",
+  "Member", "Society for Integrative and Comparative Biology (SICB)",
+) %>%
+  baretable(
+            align = "lp{1.5in}p{5in}"
+  )
+```
+
+\vspace{0.5ex}
+
+I have participated in organizing or chairing `r nconf_participated` technical conferences or sessions, served on `r ncommittee_profession` technical committees, and reviewed for `r nreview_journal` journals, `r nreview_agency` funding agencies. I also volunteered in `r noutreach` outreach activities.
+
+# Patents, Publications, and Invited Talks
+
+Since 2009 I have authored `r npub` research publications, including `r narticle` journal papers, `r nproceeding` conference papers, and `r nreport` technical reports, co-edited `r nbook` books, and filed `r npatent` patents.
+I also have delivered `r ntalk` invited talks to universities, local, national and international conferences.
+As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`.
+
+```{r selectpub}
+#| output: asis
+jtpubs[c(
+         "HTB+20", "Tao21", "THT20a", "THT19", "TT22", "TY12", "ZHT23", "ZT22a"
+  )] |>
+  add_bib_section()
+```

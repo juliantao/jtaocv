@@ -1,0 +1,9 @@
+title: ASU CV Format Template
+author: Julian Tao 
+version: 0.1.0
+contributes:
+  formats:
+    pdf:
+      template: cv.tex
+      pdf-engine: pdflatex
+      echo: false

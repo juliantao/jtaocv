@@ -1,0 +1,10 @@
+project:
+  title: "Julian Tao CV"
+  render:
+    - "*.qmd"
+
+execute:
+  echo: false
+  freeze: auto
+  warning: false
+  error: false
