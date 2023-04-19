@@ -107,6 +107,7 @@ member <- tribble(
 ```{r publication-summary, results='asis'}
 tribble(
         ~PublicationType, ~Count,
+        "Total Publications", npub,
         "Abstract published in conference proceedings", nabstract,
         "Books Co-Edited", nbook,
         "Book Chapters Published", nchapter,
@@ -132,7 +133,6 @@ tribble(
 ```{r talks-summary, results='asis'}
 tribble(
         ~TalkType, ~Count,
-        "Total Publications", npub,
         "Invited Presentation, External", ntalk_external,
         "Invited Presentation, Internal", ntalk_internal,
 #        "Invited Conference Presentations, including Students", npresent_student,
