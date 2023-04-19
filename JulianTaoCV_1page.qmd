@@ -94,7 +94,7 @@ I have participated in organizing or chairing `r nconf_participated` technical c
 
 Since 2009 I have authored `r npub` research publications, including `r narticle` journal papers, `r nproceeding` conference papers, and `r nreport` technical reports, co-edited `r nbook` books, and filed `r npatent` patents.
 I also have delivered `r ntalk` invited talks to universities, local, national and international conferences.
-As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`.
+As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`. (**Bold**: PhD student, ^#^: undergrad student, ^\*^: corresponding)
 
 ```{r selectpub}
 #| output: asis

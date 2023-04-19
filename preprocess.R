@@ -84,7 +84,13 @@ pubyear <- as_tibble(jtpubs) |> pull(date)
 # countpub
 npub <- jtpubs |>
   as_tibble() |>
-  filter(!(bibtype %in% c("Patent", "Unpublished", "Thesis", "Book"))) |>
+  filter(!(bibtype %in% c(
+    "Patent",
+    "Unpublished",
+    "Thesis",
+    "Book",
+    "Online"
+  ))) |>
   NROW()
 
 nabstract <- jtpubs |>
@@ -165,11 +171,15 @@ ntalk_external <- jttalks |>
 
 # Count presentations
 
-npresent_peer <- jtpresents |>
+npresent_peer <- jtpubs |>
   as_tibble() |>
+  filter(entrysubtype %in% c("podium", "poster")) |>
   NROW()
 
-npresent_student <- 0
+npresent_student <- jtpubs |>
+  as_tibble() |>
+  filter(grepl("phd, present", `author+an`)) |>
+  NROW()
 
 npresent_non_peer <- 0
 

@@ -132,22 +132,49 @@ tribble(
 ```{r talks-summary, results='asis'}
 tribble(
         ~TalkType, ~Count,
+        "Total Publications", npub,
         "Invited Presentation, External", ntalk_external,
         "Invited Presentation, Internal", ntalk_internal,
-        "Invited Conference Presentations, including Students", npresent_student,
+#        "Invited Conference Presentations, including Students", npresent_student,
         "Peer-reviewed Conference Presentations, including Students", npresent_peer,
-        "Non-refereed Conference Presentations", npresent_non_peer,
+#        "Non-refereed Conference Presentations", npresent_non_peer,
 ) |> 
   filter(Count > 0) |>
   baretable(align = "lp{4in}l")
 ```
+
 \vspace{1ex}
 
-Since 2009 I have authored `r npub` research publications and filed `r npatent` patents.
-As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`.
+## Google Scholar Statistics (as of `r format(Sys.time(), "%B %e, %Y")`)
 
+```{r gcites-summary, results='asis'}
+tribble(
+        ~Index, ~Count,
+        "h-index", jtcite$All[2],
+        "i10-index", jtcite$All[3],
+        "total citation", jtcite$All[1]
+) |> 
+  baretable(align = "lp{1in}l")
+```
 
-# Journal Papers
+\vspace{1ex}
+
+```{r author-symbols, results='asis'}
+tribble(
+        ~Symbol, ~notation,
+        "\\textbf{Bold Font}", "Ph.D. Student for whom I am the primary advisor",
+        "\\underline{Underline Font}","Master's Student for whom I am the primary advisor",
+        "\\textsuperscript{\\#}", "Undergraduate Student",
+        "$^\\infty$", "Other/Visiting Student",
+        "$^\\times$", "Postdoctoral Researcher",
+        "$^\\ddagger$", "High School Student",
+        "$^+$", "Equal Contributions",
+        "$^\\sim$", "Presenting Author",
+) |> 
+  baretable(align = "lp{1in}l")
+```
+
+# Journal Articles
 
 ```{r research-papers, results='asis'}
 jtpubs[bibtype == "Article"] |>
@@ -158,6 +185,27 @@ jtpubs[bibtype == "Article"] |>
 
 ```{r papers-in-proceedings, results='asis'}
 jtpubs[bibtype == "InProceedings"] |>
+  add_bib_section()
+```
+
+# Preprints
+
+```{r preprints, results='asis'}
+jtpubs[bibtype == "Online"] |>
+  add_bib_section()
+```
+
+# Working Papers
+
+```{r working-papers, results='asis'}
+jtpubs[bibtype == "Unpublished"] |>
+  add_bib_section()
+```
+
+# Patents
+
+```{r patent, results='asis'}
+jtpubs[bibtype == "Patent"] |> 
   add_bib_section()
 ```
 
@@ -179,13 +227,6 @@ jtpubs[bibtype == "Report"] |>
 
 ```{r phd, results='asis'}
 jtpubs[bibtype == "Thesis"] |> 
-  add_bib_section()
-```
-
-# Patents
-
-```{r patent, results='asis'}
-jtpubs[bibtype == "Patent"] |> 
   add_bib_section()
 ```
 
