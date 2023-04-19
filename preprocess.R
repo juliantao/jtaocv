@@ -354,13 +354,13 @@ nteaching_under_score <- allteaching |>
   filter(Course < 500) |>
   pull(Instructor) |>
   mean(na.rm = TRUE) |>
-  round(digits = 2)
+  round(digits = 1)
 
 nteaching_grad_score <- allteaching |>
   filter(Course > 500) |>
   pull(Instructor) |>
   mean(na.rm = TRUE) |>
-  round(digits = 2)
+  round(digits = 1)
 
 # Count grant amount
 
