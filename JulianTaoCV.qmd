@@ -1,6 +1,6 @@
 ---
 name: Junliang "Julian" Tao
-address: "School of Sustainable Engineering and the Built Environment,\\tabularnewline Arizona State University, AZ, 85286"
+address: "School of Sustainable Engineering and the Built Environment\\tabularnewline Arizona State University, AZ, 85286"
 www: juliantao.github.io/big/
 email: "julian.tao@asu.edu"
 twitter: juliantao25
@@ -143,7 +143,7 @@ tribble(
 ```
 \vspace{1ex}
 
-Since 2009 I have authored `r npub` research papers and filed `r npatent` patents.
+Since 2009 I have authored `r npub` research publications and filed `r npatent` patents.
 As of `r format(Sys.time(), "%B %e, %Y")`, my h-index is `r jtcite$All[2]` and i10-index is `r jtcite$All[3]`, with total citations of `r prettyNum(jtcite$All[1], big.mark=",")`.
 
 
@@ -198,7 +198,7 @@ jttalks |>
     Year = as.character(Year),
     Month = as.character(Month),
     Time = paste(Year, "--", Month, sep = ""),
-    Talk = paste("\\textit{", Title, "}. ", Meeting, ". ", Location, sep = ""),
+    Talk = paste(Title, ". ", Meeting, ". ", Location, sep = ""),
   ) |>
   select(Time, Talk) |>
   baretable(align = "lp{0.7in}p{6in}")
@@ -240,7 +240,7 @@ jtorgconfs |>
     Conforg = paste(Role, " of ", Committee, "\\linebreak", "@", Conference, sep = ""),
   ) |>
   select(Year, Conforg, Location) |>
-  baretable(align = "lp{0.7in}p{4.2in}p{2.2in}")
+  baretable(align = "lp{0.7in}p{4.8in}p{2in}")
 ```
 
 # Editorial Services 
@@ -259,7 +259,7 @@ jteditorial |>
       )
   ) |>
   select(Years, Role, Journal) |>
-  baretable(align = "lp{1in}p{1.8in}p{4in}")
+  baretable(align = "lp{0.7in}p{1.6in}p{4.5in}")
 ```
 
 # Reviewing Services
@@ -358,7 +358,7 @@ tribble(
 allstudents |>
   filter(Degree == "PostDoc") |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+  baretable(align = "lp{1in}p{2in}p{0.8in}p{3.1in}")
 ```
 
 ## Ph.D. Students
@@ -367,7 +367,7 @@ allstudents |>
 allstudents |>
   filter(c(Degree == "PhD"), (MyRole != "Thesis Committee Member")) |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+  baretable(align = "lp{1in}p{2in}p{0.8in}p{3.1in}")
 ```
 
 ## M.S. Students
@@ -376,7 +376,7 @@ allstudents |>
 allstudents |>
   filter(c(Degree == "MS"), (MyRole != "Thesis Committee Member")) |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+  baretable(align = "lp{1in}p{2in}p{0.8in}p{3.1in}")
 ```
 
 ## Undergraduate Research Students
@@ -385,7 +385,7 @@ allstudents |>
 allstudents |>
   filter(Degree == "URA") |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+  baretable(align = "lp{1in}p{2in}p{0.8in}p{3.1in}")
 ```
 
 ## High School Research Students
@@ -394,7 +394,7 @@ allstudents |>
 allstudents |>
   filter(Degree == "HSRA") |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{1.8in}p{2.2in}p{2.1in}")
+  baretable(align = "lp{1in}p{2in}p{2.2in}p{2.1in}")
 ```
 
 ## Visiting Scholars 
@@ -403,7 +403,7 @@ allstudents |>
 allstudents |>
   filter(Degree == "Visiting Scholar") |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{1.8in}p{2.2in}p{2.1in}")
+  baretable(align = "lp{1in}p{2in}p{2.2in}p{2.1in}")
 ```
 
 ## Served as a Thesis Committee Member for
@@ -412,8 +412,9 @@ allstudents |>
 allstudents |>
   filter(MyRole == "Thesis Committee Member") |>
   select(Years, Name, Institute, TopicNotes) |>
-  baretable(align = "lp{0.8in}p{2in}p{0.8in}p{3.1in}")
+  baretable(align = "lp{1in}p{2in}p{0.8in}p{3.1in}")
 ```
+\vspace{1ex}
 
 ## Student Success
 
@@ -480,7 +481,7 @@ allgrants |>
   filter(Type == "External", Status != "Pending") |>
   arrange(desc(Period), desc(Amount)) |>
   select(Period, Entry, Amount) |>
-  baretable(align = "lp{1in}p{4.7in}p{1.3in}")
+  baretable(align = "lp{1in}p{5in}p{1.5in}")
 ```
 
 # Internal Funding
@@ -491,5 +492,5 @@ allgrants |>
   filter(Type == "Internal", Status != "Pending") |>
   arrange(desc(Period), desc(Amount)) |>
   select(Period, Entry, Amount) |>
-  baretable(align = "lp{1in}p{4.7in}p{1.3in}")
+  baretable(align = "lp{1in}p{5in}p{1.5in}")
 ```
