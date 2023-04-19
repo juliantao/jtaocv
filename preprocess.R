@@ -11,7 +11,6 @@ jtcite <- gcite_citation_index(
 
 # Read files
 jtpubs <- ReadBib("./data/jtpubs.bib", check = FALSE)
-jtpresents <- ReadBib("./data/jtpresents.bib", check = FALSE)
 jttalks <- readr::read_csv("./data/jttalks.csv")
 jtteaching <- readr::read_csv("./data/jtteaching.csv")
 jtoutreach <- readr::read_csv("./data/jtoutreach.csv")
