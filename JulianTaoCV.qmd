@@ -509,7 +509,7 @@ tribble(
         "Tao's recognition in all awards", sumtao,
         "Total amount of all awards in which Tao is the PI", sumtaopi,
         "Tao's total award amount received at ASU", sumasutao,
-        "Research Expenditures", "\\$858,729",
+        "Research Expenditures", "\\$1,044,653",
 ) |> 
   baretable(align = "lp{4in}l")
 ```
