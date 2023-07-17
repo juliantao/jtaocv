@@ -6,7 +6,7 @@ source("functions.R")
 
 # Google scholar stats
 jtcite <- gcite_citation_index(
-  gcite_url("https://scholar.google.com/citations?hl=en&user=Dq4lhi4AAAAJ")
+  gcite_url("https://scholar.google.com/citations?hl=en&user=U5L3d1cAAAAJ")
 )
 
 # Read files

@@ -4,7 +4,7 @@ address: "School of Sustainable Engineering and the Built Environment\\tabularne
 www: juliantao.github.io/big/
 email: "julian.tao@asu.edu"
 twitter: juliantao25
-scholar: "Dq4lhi4AAAAJ"
+scholar: "U5L3d1cAAAAJ"
 orcid: "0000-0002-3772-3099"
 linkedin: "junliang-tao-083ab050"
 github: juliantao
