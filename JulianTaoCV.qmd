@@ -11,6 +11,7 @@ github: juliantao
 date: "`r format(Sys.Date(), '%B %Y')`"
 date-format: "MMMM YYYY"
 position: PhD, Associate Professor
+fontsize: 12pt
 format: cv-pdf
 ---
 
@@ -76,13 +77,14 @@ awards <- tribble(
 ) %>%
   baretable(align = "lp{0.8in}p{6in}")
 ```
+\newpage
 
 # Mission Statement
 
-I am leading the research group Bio-inspired Geotechnics (BiG).
+I am leading the research group Bio-inspired Geotechnics (BiG) in the NSF Research Center for Bio-mediated and Bio-inspired Geotechnics at Arizona State University.
 Our mission is to discover the fundamental mechanisms of various interactions between living things and geological materials, to abstract these mechanisms to engineering design principles, and to translate the design principles to autonomous, efficient, sustainable and intelligent geotechnics.
-We seek the answers at the boundaries of biology (and other natural sciences), mechanics and engineering. We achieve the BiG goals and extend the impacts from research, teaching, outreach, entrepreneurship and collaboration.
-Current research topics include: bio-inspired self-burrowing robots, bio-inspired underground sensing and communication, bio-inspired sustainable countermeasures to natural hazards.
+We seek the answers at the boundaries of biology, mechanics and engineering. We achieve the BiG goals and extend the impacts from research, teaching, outreach, entrepreneurship and collaboration.
+Our Current research topics include: bio-inspired self-burrowing robots, bio-inspired underground sensing and communication, bio-inspired sustainable countermeasures to natural hazards.
 
 # Professional Membership
 
@@ -509,7 +511,7 @@ tribble(
         "Tao's recognition in all awards", sumtao,
         "Total amount of all awards in which Tao is the PI", sumtaopi,
         "Tao's total award amount received at ASU", sumasutao,
-        "Research Expenditures", "\\$1,044,653",
+#        "Research Expenditures at ASU", "\\$1,044,653",
 ) |> 
   baretable(align = "lp{4in}l")
 ```

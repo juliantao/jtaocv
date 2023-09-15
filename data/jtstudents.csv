@@ -2,15 +2,15 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2021,2021,Sichuan Huang,PostDoc,ASU,Clam + Robot,,
 2021,,Sarina Shahhosseini,PhD,ASU,Burrowing Robots,Dissertation Chair,
 2020,,Xiwei Li,PhD,ASU,Mangrove + Scour,Dissertation co-Chair,Co-advised with Professor Leon van Paassen
-2019,,Yi Zhong,PhD,ASU,Lizard/Mole +Underground Communication,Dissertation Chair,
-2018,,Yong Tang,PhD,ASU,Seed Awn + Burrowing Mechanism,Dissertation Chair,
+2019,2023,Yi Zhong,PhD,ASU,Lizard/Mole +Underground Communication,Dissertation Chair,
+2018,2023,Yong Tang,PhD,ASU,Seed Awn + Burrowing Mechanism,Dissertation Chair,
 2018,2020,Sichuan Huang,PhD,ASU,Clam + Burrowing Mechanism,Dissertation Chair,
 2014,2018,Junhong Li,PhD,UAkron,Bridge Scour,Dissertation Chair,
 2014,2018,Hui Tao,PhD,UAkron,Internal Erosion,Dissertation Chair,
-2023,,Marilyn Mendoza,MS,ASU,Burrowing Robots,Dissertation Chair,
-2022,,Manthan Rajendra Pai,MS,ASU,Burrowing Robots,Dissertation Chair,
-2022,,Dishika Agrawal,MS,ASU,Burrowing Robots,Dissertation Chair,
-2021,,Md Ragib Shaharear,MS,ASU,Burrowing Robots,Dissertation Chair,
+2023,2023,Marilyn Mendoza,MS,ASU,Burrowing Robots,non-thesis,
+2022,2023,Manthan Rajendra Pai,MS,ASU,Burrowing Robots,Dissertation Chair,
+2022,2023,Dishika Agrawal,MS,ASU,Burrowing Robots,Dissertation Chair,
+2021,2023,Md Ragib Shaharear,MS,ASU,Burrowing Robots,Dissertation Chair,
 2019,2021,Brian Rudolph,MS,ASU,,Co-Chair,Co-advised with Professor Claudia Zapata; non-thesis 
 2019,2021,Drew Enns,MS,ASU,Mangrove + Scour,Thesis co-Chair,Co-advised with Professor Leon van Paassen
 2019,2020,Joel Ramirez,MS,ASU,Mangrove + Scour,Co-Chair,Co-advised with Professor Leon van Paassen; Student graduated without thesis
@@ -21,7 +21,11 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2014,2016,Jie Hu,MS,UAkron,Energy Harvesting,Thesis Chair,
 2015,2016,Goutham Narayan Mopur,MS,UAkron,Peat Stabilization,Thesis Chair,
 2013,2014,Candice Fellows,MS,UAkron,Energy Piles,Thesis co-Chair,Co-advised with Professor Robert Liang
-2021,,Mohan Parekh,URA,ASU,Burrowing Robots,,
+2023,,Chiran Raj Verma,URA,ASU,Underground Communication,,Electrical Engineering
+2023,,Maxime Zand,URA,ASU,Burrowing Robots,,Mechanical Engineering
+2023,,Arin Shaw,URA,ASU,Animal Self-burial,,Biology
+2023,,Varun Kumar,URA,ASU,Underground Navigation,,Computer Science
+2021,2023,Mohan Parekh,URA,ASU,Burrowing Robots,,
 2021,2021,Ashwin Kumar S,URA,ASU,Burrowing Robots,,"SURI, from Easwari Engineering College, India"
 2021,2021,Harsh Rajkamal,URA,ASU,Burrowing Robots,,"SURI, from Vellore Institute of Technology, India"
 2021,2021,Shesha Sai Tushar Kanchipuram,URA,ASU,Burrowing Robots,,"SURI, from Biral Institute of Technology and Science, Pilani, India"
@@ -29,8 +33,8 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2021,2021,Leslie Bautista and Marilyn Mendoza,URA,ASU,Geo-prediction,,Co-advised with Professors Ed Kavazanjian and Leon van Paassen
 2020,2021,Chung Ting Wong,URA,ASU,Mangrove + Scour,,Co-advised with Professor Leon van Paassen
 2020,2020,Andrew Suarez,URA,ASU,Burrowing Robots,,"REU, Veteran"
-2019,2021,Alexandria Ardente,URA,ASU,Burrowing Robots,,
-2019,2019,Lindsay Lee,URA,ASU,Burrowing Robots,,Mechanical Engineering
+2019,2021,Alexandria Ardente,URA,ASU,Burrowing Robots,,Mechanical Engineering
+2019,2019,Lindsay Lee,URA,ASU,Burrowing Robots,,
 2019,2019,Amanda Clarke,URA,ASU,Burrowing Robots,,VIP program
 2019,2019,Brandon Grimes,URA,ASU,Burrowing Robots,,VIP program
 2019,2020,Stephen Dages,URA,ASU,Burrowing Robots,,"REU, Physics, from West Chester University"
@@ -49,7 +53,7 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2019,2020,Yunqi Gao,Visiting Scholar,Hohai University,Seismic wave,,
 2016,2018,Xiangrong Wang,Visiting Scholar,Peking University,MICP,,
 2015,2016,Haichao Li,Visiting Scholar,Heibei University of Technology,Explosive compaction,,
-2022,,Saeedeh Naziri,PhD,NMSU,,Thesis Committee Member,Civil Engineering
+2022,2023,Saeedeh Naziri,PhD,NMSU,,Thesis Committee Member,Civil Engineering
 2019,,Thibaut Houette,PhD,UAkron,,Thesis Committee Member,Biology
 2021,2021,Jasmine Victoria,MS,UC Davis,,Thesis Committee Member,Civil Engineering
 2020,2020,Nana Kwame Ofosu,MS,ASU,,Thesis Committee Member,Mechanical Engineering
