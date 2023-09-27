@@ -1,0 +1,208 @@
+---
+name: Junliang "Julian" Tao
+address: "School of Sustainable Engineering and the Built Environment\\tabularnewline Arizona State University, AZ, 85286"
+www: juliantao.github.io/big/
+email: "julian.tao@asu.edu"
+twitter: juliantao25
+scholar: "U5L3d1cAAAAJ"
+orcid: "0000-0002-3772-3099"
+linkedin: "junliang-tao-083ab050"
+github: juliantao
+date: "`r format(Sys.Date(), '%B %Y')`"
+date-format: "MMMM YYYY"
+position: PhD, Associate Professor
+format: cv-pdf
+---
+
+```{r import} 
+source("preprocess.R")
+```
+
+# Education 
+
+```{r degrees, results='asis'}
+tribble(
+  ~Degree, ~Area, ~Insitution, ~State, ~Years,
+  "\\textbf{PhD} ", "Civil Engineering", "Case Western Reserve University", "Cleveland, US", "2013",
+  "\\textbf{MS} ", "Civil Engineering", "Tongji University", "Shanghai, China", "2009",
+  "\\textbf{BS} ", "Civil Engineering", "China University of Geosciences", "Wuhan, China", "2006"
+) |> 
+  baretable()
+```
+
+# Experiences
+
+```{r employment, results='asis'}
+tribble(
+  ~Start, ~End, ~Position, ~Institute,
+  2018, NA, "\\textbf{Associate Professor}", "School of Sustainable Engineering and the Built Environment, \\newline Arizona State University",
+	2022, 2022, "\\textbf{Guest Professor}", "Institute of Geotechnical Engineering, \\newline University of Natural Resources and Life Sciences (BOKU)",
+  2013, 2018, "\\textbf{Assistant Professor}", "Department of Civil Engineering, \\newline University of Akron"
+) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position, Institute) |>
+  baretable(align = "llp{1.5in}p{6.5in}")
+```
+
+# Select Honors and Awards
+
+```{r awards, results='asis'}
+awards <- tribble(
+  ~Year, ~Award,
+  2020, "The 10th Anniversary Excellent Paper Award, Journal of Rock Mechanics and Geotechnical Engineering",
+  2017, "CAREER Award, National Science Foundation",
+  2017, "Gary W. Johnson Young Civil Engineer of the Year Award, ASCE Akron-Canton Section",
+) %>%
+  baretable(align = "lp{0.8in}p{6in}")
+```
+
+# Mission Statement
+
+I am leading the research group Bio-inspired Geotechnics (BiG) in the NSF Research Center for Bio-mediated and Bio-inspired Geotechnics at Arizona State University.
+Our mission is to discover the fundamental mechanisms of various interactions between living things and geological materials, to abstract these mechanisms to engineering design principles, and to translate the design principles to autonomous, efficient, sustainable and intelligent geotechnics.
+We seek the answers at the interfaces of biology, mechanics and engineering. We achieve the BiG goals and extend the impacts from research, teaching, outreach, entrepreneurship and collaboration.
+Our Current research topics include: bio-inspired self-burrowing robots, bio-inspired underground sensing and communication, bio-inspired sustainable countermeasures to natural hazards.
+
+# Professional Membership
+
+```{r member, results='asis'}
+member <- tribble(
+  ~Type, ~Org,
+  "Associate Member", "American Society of Civil Engineers (ASCE) Geo-Institute",
+  "Member", "International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE)",
+  "Member", "Society for Integrative and Comparative Biology (SICB)",
+  "Member", "Institute of Electrical and Electronics Engineers (IEEE)",
+  "Member", "International Society for Optical Engineering (SPIE)",
+  "Member", "Transportation Research Board (TRB)",
+#  "Member", "International Association of Chinese Infrastructure Professionals (IACIP)",
+) %>%
+  baretable(align = "lp{1.5in}p{6in}")
+```
+
+\vspace{1.5em}
+
+\part*{\uppercase{Publications, Intellectual Property and Invited Talks}}
+
+Since 2009, I have authored **`r npub`** research publications, including **`r narticle`** journal papers, **`r nproceeding`** conference papers, and **`r nreport`** technical reports, co-edited **`r nbook`** books, and filed **`r npatent`** patents.
+I also have delivered **`r ntalk`** invited talks to universities, local, national and international conferences.
+As of **`r format(Sys.time(), "%B %e, %Y")`**, my h-index is **`r jtcite$All[2]`** and i10-index is **`r jtcite$All[3]`**, with total citations of **`r prettyNum(jtcite$All[1], big.mark=",")`**. Only publications on bio-inspired geotechnics are included below.
+
+# Journal Articles on Bio-inspired Geotechnics [^1]
+
+[^1]: **Bold**: PhD student, \underline{Underline}: MS student,  ^#^: undergrad student, $^\infty$: visiting student, $^\times$: PostDoc, ^\*^: corresponding
+
+```{r research-papers-bio, results='asis'}
+jtpubs[c(
+  "BLL+17", "BSB+23", "HT20", "HTB+20", "HYT13", "LHT+21a", "LT15", "LTL17", "LvT22", "MDA+22", "STL+17", "Tao21", "THT19", "THT20a", "TL15a", "TLWB18", "TSWY13", "TT22", "TY12", "TY16", "WT19", "WTB+18", "ZHT23", "ZT22a"
+  )] |>
+  add_bib_section()
+```
+
+# Conference Papers on Bio-inspired Geotechnics [^2]
+
+[^2]: **Bold**: PhD student, \underline{Underline}: MS student,  ^#^: undergrad student, $^\infty$: visiting student, $^\times$: PostDoc, ^\*^: corresponding, $^\sim$: presentor
+
+```{r papers-in-proceedings-bio, results='asis'}
+jtpubs[c(
+  "BLL+17a", "HMT20", "HMT21", "HMT22", "HT17", "HT17a", "HT18", "HT18a", "HT20a", "HT22", "LT17", "LTv22", "LTv23", "LTY15", "PT18", "SPT23", "STLT23", "THT20", "TT21", "TT22a", "TT23", "TT23a", "TYB11a", "WT18", "ZGT21", "ZT22", "ZT23"
+  )] |>
+  add_bib_section()
+```
+
+# Patents
+
+```{r patent, results='asis'}
+jtpubs[bibtype == "Patent"] |> 
+  add_bib_section()
+```
+
+# Invited Talks in the Past 3 Years
+
+```{r talks, results='asis'}
+jttalks |>
+  filter(Year > 2020) |>
+  arrange(-Year) |>
+  mutate(
+    Year = as.character(Year),
+    Month = as.character(Month),
+    Time = paste(Year, "--", Month, sep = ""),
+    Talk = paste(Title, ". ", Meeting, ". ", Location, sep = ""),
+  ) |>
+  select(Time, Talk) |>
+  baretable(align = "lp{0.7in}p{6in}")
+```
+
+\vspace{1.5em}
+
+\part*{\uppercase{Professional activities and service}}
+
+I served as an Editor or Guest Editor for **`r neditorial_editor`** peer-reviewed journals or journal special issues and currently serving on an Editorial Board for **`r neditorial_board`** journal. I chaired **`r nconf_chair`** international/national conferences and **`r nconf_session_chair`** conference sessions, reviewed for **`r nreview_journal`** journals, numerous conferences and multiple funding agencies.
+
+Externally, I served on **`r ncommittee_profession`** professional committees; and internally, I also served on **`r ncommittee_university`** university-level committees, **`r ncommittee_school`** Engineering School-level committees and **`r ncommittee_unit`** unit-level committees.
+
+# Conference Organization in the Past 3 Years
+
+```{r conforg, results='asis'}
+jtorgconfs |>
+  filter(Year > 2020) |>
+  arrange(-Year) |>
+  mutate(
+    Conforg = paste(Role, " of ", Committee, "\\linebreak", "@", Conference, sep = ""),
+  ) |>
+  select(Year, Conforg, Location) |>
+  baretable(align = "lp{0.7in}p{4.8in}p{2in}")
+```
+
+# Editorial Services 
+
+```{r editorial, results='asis'}
+jteditorial |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+      )
+  ) |>
+  select(Years, Role, Journal) |>
+  baretable(align = "lp{0.7in}p{1.6in}p{4.5in}")
+```
+
+\vspace{1.5em}
+
+\part*{\uppercase{Mentoring and Teaching}}
+
+As of **`r format(Sys.time(), "%B, %Y")`**, I have mentored **`r npostdoc`** PostDoc, **`r nphd_graduated`** graduated PhDs, **`r nphd_current`** ongoing PhD students, **`r nms_graduated + nms_current`** MS students, **`r nura`** undergraduate research students, **`r nhsra`** high school researchers, and **2** high school teacher researchers.
+
+I have taught **`r nteaching_under`** undergraduate-level courses with a mean score of **`r nteaching_under_score`**/5,  and **`r nteaching_grad`** graduate-level courses with a mean score of **`r nteaching_grad_score`**/5.
+
+\vspace{1.5em}
+
+\part*{\uppercase{Research Support}}
+
+The awards in which Dr. Tao served as an investigator total **`r sumgrants`**; Dr. Tao's recognitions in all awards total **`r sumtao`**; the total amount of all awards in which Dr. Tao is the leading PI is **`r sumtaopi`**.
+
+# External Funding on Bio-inspired Geotechnics as PI
+
+```{r nsffunding, results='asis'} 
+
+allgrants |>
+  filter(grepl("CAREER|SitS", Title)) |>
+  arrange(desc(Period), desc(Amount)) |>
+  select(Period, Entry, Amount) |>
+  baretable(align = "lp{1in}p{5in}p{1.5in}")
+```
+
