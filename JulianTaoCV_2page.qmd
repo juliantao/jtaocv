@@ -6,7 +6,7 @@ email: "julian.tao@asu.edu"
 scholar: "U5L3d1cAAAAJ"
 orcid: "0000-0002-3772-3099"
 github: juliantao
-date: "`r format(Sys.Date(), '%B %Y')`"
+date: today 
 date-format: "MMMM YYYY"
 position: PhD, Associate Professor
 fontsize: "12pt"

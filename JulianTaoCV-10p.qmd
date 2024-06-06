@@ -8,7 +8,7 @@ scholar: "U5L3d1cAAAAJ"
 orcid: "0000-0002-3772-3099"
 linkedin: "junliang-tao-083ab050"
 github: juliantao
-date: "`r format(Sys.Date(), '%B %Y')`"
+date: today 
 date-format: "MMMM YYYY"
 position: PhD, Associate Professor
 format: cv-pdf
@@ -138,11 +138,11 @@ jtpubs[bibtype == "Thesis"] |>
   add_bib_section()
 ```
 
-# Invited Talks in the Past 3 Years
+# Most Recent Invited Talks
 
 ```{r talks, results='asis'}
 jttalks |>
-  filter(Year > 2020) |>
+  filter(Year > 2021) |>
   arrange(-Year) |>
   mutate(
     Year = as.character(Year),
@@ -162,11 +162,11 @@ I served as an Editor or Guest Editor for **`r neditorial_editor`** peer-reviewe
 
 Externally, I served on **`r ncommittee_profession`** professional committees; and internally, I also served on **`r ncommittee_university`** university-level committees, **`r ncommittee_school`** Engineering School-level committees and **`r ncommittee_unit`** unit-level committees.
 
-# Conference Organization in the Past 3 Years
+# Most Recent Conference Organization
 
 ```{r conforg, results='asis'}
 jtorgconfs |>
-  filter(Year > 2020) |>
+  filter(Year > 2021) |>
   arrange(-Year) |>
   mutate(
     Conforg = paste(Role, " of ", Committee, "\\linebreak", "@", Conference, sep = ""),

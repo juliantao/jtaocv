@@ -1,6 +1,6 @@
 %% Template for a CV
-%% Author: Rob J Hyndman
-%%: Slightly Modified by Julian Tao
+%% Original Author: Rob J Hyndman
+%%:Modified by Julian Tao
 
 \documentclass[$if(fontsize)$$fontsize$$else$10pt$endif$,$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$$else$letterpaper$endif$,$for(classoption)$$classoption$$sep$,$endfor$]{article}
 $if(fontfamily)$
@@ -96,12 +96,12 @@ $endif$
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
-\usepackage{longtable,booktabs}
+\usepackage{longtable}
 % Remove whitespace before and after the longtables
 \setlength{\LTpre}{0pt}
 \setlength{\LTpost}{0pt}
 % Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 $if(graphics)$
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -366,6 +366,11 @@ $if(position)$\\[0.1cm]\large $position$\\[0.6cm]$else$\\[0.7cm]$endif$
 
 \usepackage{booktabs,fontawesome5}
 %\usepackage[t1,scale=0.86]{sourcecodepro}
+
+% Redefine \toprule, \midrule, and \bottomrule to do nothing
+\renewcommand{\toprule}{}
+\renewcommand{\midrule}{}
+\renewcommand{\bottomrule}{}
 
 \name{$name$$if(surname)$ $surname$$endif$}
 \def\imagetop#1{\vtop{\null\hbox{#1}}}

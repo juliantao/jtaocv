@@ -1,9 +1,10 @@
+# Original Author: Rob J Hyndman
+# Modified by Julian Tao
 # Function to produce very basic table, no lines or headings
 # Changes made: default longtables, also activiate booktable by default to eliminate the bottom rule
 
 baretable <- function(tbl, digits = 0,
                       include.colnames = FALSE, include.rownames = FALSE,
-                      hline.after = NULL,
                       size = getOption("xtable.size", NULL),
                       add.to.row = getOption("xtable.add.to.row", NULL),
                       longtable = TRUE,
@@ -13,7 +14,6 @@ baretable <- function(tbl, digits = 0,
     print(
       include.colnames = include.colnames,
       include.rownames = include.rownames,
-      hline.after = hline.after,
       booktabs = booktabs,
       comment = FALSE,
       tabular.environment = if_else(longtable, "longtable", "tabular"),
