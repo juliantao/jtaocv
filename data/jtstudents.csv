@@ -22,10 +22,10 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2014,2016,Jie Hu,MS,UAkron,Energy Harvesting,Thesis Chair,
 2015,2016,Goutham Narayan Mopur,MS,UAkron,Peat Stabilization,Thesis Chair,
 2013,2014,Candice Fellows,MS,UAkron,Energy Piles,Thesis co-Chair,Co-advised with Professor Robert Liang
-2023,,Chiran Raj Verma,URA,ASU,Underground Communication,,Electrical Engineering
-2023,,Maxime Zand,URA,ASU,Burrowing Robots,,Mechanical Engineering
-2023,,Arin Shaw,URA,ASU,Animal Self-burial,,Biology
-2023,,Varun Kumar,URA,ASU,Underground Navigation,,Computer Science
+2023,2023,Chiran Raj Verma,URA,ASU,Underground Communication,,Electrical Engineering
+2023,2023,Maxime Zand,URA,ASU,Burrowing Robots,,Mechanical Engineering
+2023,2023,Arin Shaw,URA,ASU,Animal Self-burial,,Biology
+2023,2023,Varun Kumar,URA,ASU,Underground Navigation,,Computer Science
 2021,2023,Mohan Parekh,URA,ASU,Burrowing Robots,,
 2021,2021,Ashwin Kumar S,URA,ASU,Burrowing Robots,,"SURI, from Easwari Engineering College, India"
 2021,2021,Harsh Rajkamal,URA,ASU,Burrowing Robots,,"SURI, from Vellore Institute of Technology, India"
@@ -56,8 +56,10 @@ Start,End,Name,Degree,Institute,Topic,MyRole,Note
 2019,2020,Yunqi Gao,Visiting Scholar,Hohai University,Seismic wave,,
 2016,2018,Xiangrong Wang,Visiting Scholar,Peking University,MICP,,
 2015,2016,Haichao Li,Visiting Scholar,Heibei University of Technology,Explosive compaction,,
+2024,,Hamid Nemati Noghlebari, ASU, Thesis Committee Member,Engineering
+2020,, Charles Edwards, UAkron, Thesis Committee Member, Biology
 2022,2023,Saeedeh Naziri,PhD,NMSU,,Thesis Committee Member,Civil Engineering
-2019,,Thibaut Houette,PhD,UAkron,,Thesis Committee Member,Biology
+2019,2023,Thibaut Houette,PhD,UAkron,,Thesis Committee Member,Biology
 2021,2021,Jasmine Victoria,MS,UC Davis,,Thesis Committee Member,Civil Engineering
 2020,2020,Nana Kwame Ofosu,MS,ASU,,Thesis Committee Member,Mechanical Engineering
 2019,2019,Daehyun Kim,PhD,ASU,,Thesis Committee Member,Civil Engineering

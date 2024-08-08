@@ -142,7 +142,7 @@ jtpubs[bibtype == "Thesis"] |>
 
 ```{r talks, results='asis'}
 jttalks |>
-  filter(Year > 2021) |>
+  filter(Year > 2022) |>
   arrange(-Year) |>
   mutate(
     Year = as.character(Year),
@@ -166,7 +166,7 @@ Externally, I served on **`r ncommittee_profession`** professional committees; a
 
 ```{r conforg, results='asis'}
 jtorgconfs |>
-  filter(Year > 2021) |>
+  filter(Year > 2022) |>
   arrange(-Year) |>
   mutate(
     Conforg = paste(Role, " of ", Committee, "\\linebreak", "@", Conference, sep = ""),
@@ -198,7 +198,7 @@ jteditorial |>
 
 ```{r uniserv, results='asis'}
 jtunivserv |>
-  filter(Start >= 2018) |>
+  filter(Start >= 2022) |>
   arrange(-Start) |>
   mutate(
     Start = as.character(Start),
