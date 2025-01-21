@@ -1,14 +1,4 @@
 ---
-name: Junliang "Julian" Tao
-address: "School of Sustainable Engineering and the Built Environment,\\tabularnewline Arizona State University, AZ, 85286"
-www: juliantao.github.io/big/
-email: "julian.tao@asu.edu"
-scholar: "U5L3d1cAAAAJ"
-orcid: "0000-0002-3772-3099"
-github: juliantao
-date: today
-date-format: "MMMM YYYY"
-position: PhD, Associate Professor
 fontsize: "11pt"
 format: cv-pdf
 header-includes:
