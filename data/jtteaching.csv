@@ -1,4 +1,8 @@
 Department,Course,Title,Term,Year,Credits,Enrollment,Instructor,College
+CEE,452,Foundation Engineering,Spring,2025,3,35,4.63,5
+CEE,598,Foundation Engineering,Spring,2025,3,2,5,5
+CEE,494,Bio-inspired Design,Spring,2025,3,14,5,5
+CEE,598,Bio-inspired Design,Spring,2025,3,5,4.6,5
 CEE,550,Soil Behavior,Fall,2024,3,15,4.36,5
 CEE,452,Foundation Engineering,Spring,2024,3,30,4.38,5
 CEE,598,Foundation Engineering,Spring,2024,3,3,4.00,5

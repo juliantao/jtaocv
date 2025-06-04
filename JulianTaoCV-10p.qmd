@@ -119,12 +119,12 @@ jtpubs[bibtype == "Patent"] |>
   add_bib_section()
 ```
 
-# PhD Thesis
+<!-- # PhD Thesis -->
 
-```{r phd, results='asis'}
-jtpubs[bibtype == "Thesis"] |> 
-  add_bib_section()
-```
+<!-- ```{r phd, results='asis'} -->
+<!-- jtpubs[bibtype == "Thesis"] |>  -->
+<!--   add_bib_section() -->
+<!-- ``` -->
 
 # Most Recent Invited Talks
 
